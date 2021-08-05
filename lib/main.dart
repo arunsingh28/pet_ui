@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screen/Drawer.dart';
+import 'screen/Home.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -9,6 +11,10 @@ void main() {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Stack(
+        children: [DrawerScreen(), Home()],
+      ),
+    );
   }
 }
